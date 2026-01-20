@@ -10,7 +10,6 @@ const _playfair = Playfair_Display({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'Joy Craft Events | Wedding & Event Planning',
   description: 'Crafting joy into every celebration. Premium wedding and event planning services for your most cherished moments.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
