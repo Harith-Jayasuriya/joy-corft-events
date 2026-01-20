@@ -1,26 +1,54 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     @media (prefers-color-scheme: light) {
-      .background { fill: black; }
-      .foreground { fill: white; }
+      .highlight { fill: white; opacity: 0.5; }
     }
     @media (prefers-color-scheme: dark) {
-      .background { fill: white; }
-      .foreground { fill: black; }
+      .highlight { fill: white; opacity: 0.6; }
     }
   </style>
-  <g clip-path="url(#clip0_7960_43945)">
-    <rect class="background" width="180" height="180" rx="37" />
-    <g style="transform: scale(95%); transform-origin: center">
-      <path class="foreground"
-        d="M101.141 53H136.632C151.023 53 162.689 64.6662 162.689 79.0573V112.904H148.112V79.0573C148.112 78.7105 148.098 78.3662 148.072 78.0251L112.581 112.898C112.701 112.902 112.821 112.904 112.941 112.904H148.112V126.672H112.941C98.5504 126.672 86.5638 114.891 86.5638 100.5V66.7434H101.141V100.5C101.141 101.15 101.191 101.792 101.289 102.422L137.56 66.7816C137.255 66.7563 136.945 66.7434 136.632 66.7434H101.141V53Z" />
-      <path class="foreground"
-        d="M65.2926 124.136L14 66.7372H34.6355L64.7495 100.436V66.7372H80.1365V118.47C80.1365 126.278 70.4953 129.958 65.2926 124.136Z" />
-    </g>
-  </g>
-  <defs>
-    <clipPath id="clip0_7960_43945">
-      <rect width="180" height="180" fill="white" />
-    </clipPath>
-  </defs>
+  
+  <!-- Back left balloon - Purple -->
+  <ellipse fill="#9B59B6" cx="60" cy="65" rx="18" ry="21"/>
+  <ellipse class="highlight" cx="54" cy="58" rx="6" ry="10" transform="rotate(-20 54 58)"/>
+  
+  <!-- Back right balloon - Light Blue -->
+  <ellipse fill="#5DADE2" cx="120" cy="70" rx="18" ry="21"/>
+  <ellipse class="highlight" cx="114" cy="63" rx="6" ry="10" transform="rotate(-20 114 63)"/>
+  
+  <!-- Middle left balloon - Pink -->
+  <ellipse fill="#FF6B9D" cx="50" cy="50" rx="20" ry="24"/>
+  <ellipse class="highlight" cx="43" cy="42" rx="7" ry="12" transform="rotate(-20 43 42)"/>
+  
+  <!-- Middle right balloon - Orange -->
+  <ellipse fill="#F39C12" cx="130" cy="55" rx="20" ry="24"/>
+  <ellipse class="highlight" cx="123" cy="47" rx="7" ry="12" transform="rotate(-20 123 47)"/>
+  
+  <!-- Front center-left balloon - Yellow -->
+  <ellipse fill="#F1C40F" cx="75" cy="45" rx="21" ry="25"/>
+  <ellipse class="highlight" cx="68" cy="36" rx="7" ry="13" transform="rotate(-20 68 36)"/>
+  
+  <!-- Front center balloon - Red (largest) -->
+  <ellipse fill="#E74C3C" cx="90" cy="40" rx="23" ry="27"/>
+  <ellipse class="highlight" cx="82" cy="30" rx="8" ry="14" transform="rotate(-20 82 30)"/>
+  
+  <!-- Front center-right balloon - Blue -->
+  <ellipse fill="#3498DB" cx="105" cy="48" rx="21" ry="25"/>
+  <ellipse class="highlight" cx="98" cy="39" rx="7" ry="13" transform="rotate(-20 98 39)"/>
+  
+  <!-- Balloon knots -->
+  <path fill="#E74C3C" d="M 88 67 Q 90 69, 92 67"/>
+  <path fill="#F1C40F" d="M 73 70 Q 75 72, 77 70"/>
+  <path fill="#FF6B9D" d="M 48 74 Q 50 76, 52 74"/>
+  <path fill="#3498DB" d="M 103 73 Q 105 75, 107 73"/>
+  <path fill="#F39C12" d="M 128 79 Q 130 81, 132 79"/>
+  
+  <!-- Strings converging to center -->
+  <path stroke="#E74C3C" d="M 90 69 L 90 120" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path stroke="#F1C40F" d="M 75 72 L 90 120" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path stroke="#FF6B9D" d="M 50 76 L 90 120" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path stroke="#3498DB" d="M 105 75 L 90 120" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path stroke="#F39C12" d="M 130 81 L 90 120" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path stroke="#9B59B6" d="M 60 86 L 90 120" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path stroke="#5DADE2" d="M 120 91 L 90 120" stroke-width="1.5" fill="none" opacity="0.6"/>
 </svg>
