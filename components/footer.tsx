@@ -17,7 +17,7 @@ export function Footer() {
                 className="flex w-full justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
               >
                 <Image
-                  src="/Logo1_compressed_compressed.webp"
+                  src="/Logo1_compressed_compressed-no-bg.png"
                   alt="Joy Craft Events"
                   width={520}
                   height={170}
