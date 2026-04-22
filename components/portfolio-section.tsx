@@ -269,7 +269,7 @@ export function PortfolioSection() {
     <section
       ref={sectionRef}
       id="portfolio"
-      className="py-20 md:py-24 bg-secondary/30"
+      className="py-32 bg-secondary/30"
     >
       <div className="container mx-auto px-6">
         <div

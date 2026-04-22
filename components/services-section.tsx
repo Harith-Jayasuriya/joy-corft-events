@@ -55,7 +55,7 @@ export function ServicesSection() {
     <section
       ref={sectionRef}
       id="services"
-      className="py-20 md:py-24 bg-background"
+      className="py-32 bg-background"
     >
       <div className="container mx-auto px-6">
         <div
