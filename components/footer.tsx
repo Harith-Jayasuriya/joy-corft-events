@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Heart } from "lucide-react"
 
@@ -5,18 +6,29 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="py-16 bg-foreground text-card">
+    <footer className="bg-white py-10 md:py-12 text-foreground">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-4 gap-8 md:gap-10 mb-8 md:mb-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="font-serif text-2xl tracking-wide">
-              Joy Craft Events
-            </Link>
-            <p className="mt-4 text-card/70 max-w-md leading-relaxed">
-              Creating unforgettable celebrations since 2010. We transform your dreams into
-              reality with elegance, precision, and a touch of magic.
-            </p>
+            <div className="max-w-md">
+              <Link
+                href="/"
+                className="flex w-full justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
+              >
+                <Image
+                  src="/Logo1_compressed_compressed.webp"
+                  alt="Joy Craft Events"
+                  width={520}
+                  height={170}
+                  className="h-24 w-auto object-contain md:h-28 lg:h-32"
+                />
+              </Link>
+              <p className="mt-4 text-foreground/70 leading-relaxed">
+                Creating unforgettable celebrations since 2010. We transform your dreams into
+                reality with elegance, precision, and a touch of magic.
+              </p>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -25,25 +37,25 @@ export function Footer() {
             <nav className="flex flex-col gap-3">
               <Link
                 href="#services"
-                className="text-card/70 hover:text-card transition-colors"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Services
               </Link>
               <Link
                 href="#portfolio"
-                className="text-card/70 hover:text-card transition-colors"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Portfolio
               </Link>
               <Link
                 href="#testimonials"
-                className="text-card/70 hover:text-card transition-colors"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Testimonials
               </Link>
               <Link
                 href="#contact"
-                className="text-card/70 hover:text-card transition-colors"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Contact
               </Link>
@@ -56,25 +68,25 @@ export function Footer() {
             <nav className="flex flex-col gap-3">
               <Link
                 href="#services"
-                className="text-card/70 hover:text-card transition-colors"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Weddings
               </Link>
               <Link
                 href="#services"
-                className="text-card/70 hover:text-card transition-colors"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Birthday Parties
               </Link>
               <Link
                 href="#services"
-                className="text-card/70 hover:text-card transition-colors"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Corporate Events
               </Link>
               <Link
                 href="#services"
-                className="text-card/70 hover:text-card transition-colors"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Anniversaries
               </Link>
@@ -82,11 +94,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-card/20 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-card/60 text-sm">
+        <div className="pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-foreground/60 text-sm">
             © {currentYear} Joy Craft Events. All rights reserved.
           </p>
-          <p className="text-card/60 text-sm flex items-center gap-1">
+          <p className="text-foreground/60 text-sm flex items-center gap-1">
             Made with <Heart className="w-4 h-4 text-primary" fill="currentColor" /> for your special moments
           </p>
         </div>

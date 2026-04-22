@@ -66,11 +66,11 @@ export function ContactSection() {
     <section
       ref={sectionRef}
       id="contact"
-      className="py-32 bg-secondary/30"
+      className="py-16 md:py-20 bg-secondary/30"
     >
       <div className="container mx-auto px-6">
         <div
-          className={`text-center mb-20 transition-all duration-1000 ${
+          className={`text-center mb-10 md:mb-12 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -83,7 +83,7 @@ export function ContactSection() {
           <div className="mt-6 w-24 h-px bg-primary/50 mx-auto" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div
             className={`transition-all duration-1000 delay-200 ${
@@ -91,7 +91,7 @@ export function ContactSection() {
             }`}
           >
             {submitted ? (
-              <div className="bg-card p-12 rounded-sm border border-border text-center">
+              <div className="bg-card p-8 md:p-10 rounded-sm border border-border text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Mail className="w-8 h-8 text-primary" />
                 </div>
@@ -241,8 +241,8 @@ export function ContactSection() {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
-            <div className="bg-card p-8 md:p-12 rounded-sm border border-border h-full">
-              <h3 className="font-serif text-2xl text-foreground mb-8">
+            <div className="bg-card p-6 md:p-8 rounded-sm border border-border h-full">
+              <h3 className="font-serif text-2xl text-foreground mb-6">
                 Visit Our Studio
               </h3>
               <div className="space-y-6">
@@ -294,7 +294,7 @@ export function ContactSection() {
                 </div>
               </div>
 
-              <div className="mt-10 pt-8 border-t border-border">
+              <div className="mt-8 pt-6 border-t border-border">
                 <p className="font-medium text-foreground mb-4">Follow Us</p>
                 <div className="flex gap-4">
                   <a
