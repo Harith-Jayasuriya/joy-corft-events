@@ -52,7 +52,7 @@ export function ContactSection() {
       .filter(Boolean)
       .join("\n")
 
-    const whatsappUrl = `https://wa.me/94741207909?text=${encodeURIComponent(text)}`
+    const whatsappUrl = `https://wa.me/94763880520?text=${encodeURIComponent(text)}`
     const a = document.createElement("a")
     a.href = whatsappUrl
     a.target = "_blank"
