@@ -36,11 +36,25 @@ export function ContactSection() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+
+    const text = [
+      `*New Event Enquiry*`,
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      formData.phone ? `Phone: ${formData.phone}` : null,
+      formData.eventType ? `Event Type: ${formData.eventType}` : null,
+      formData.date ? `Preferred Date: ${formData.date}` : null,
+      `Message: ${formData.message}`,
+    ]
+      .filter(Boolean)
+      .join("\n")
+
+    const whatsappUrl = `https://wa.me/94741207909?text=${encodeURIComponent(text)}`
+    window.open(whatsappUrl, "_blank")
+
     setIsSubmitting(false)
     setSubmitted(true)
     setFormData({
@@ -70,9 +84,8 @@ export function ContactSection() {
     >
       <div className="container mx-auto px-6">
         <div
-          className={`text-center mb-10 md:mb-12 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`text-center mb-10 md:mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
             Get In Touch
@@ -86,9 +99,8 @@ export function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div
-            className={`transition-all duration-1000 delay-200 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-            }`}
+            className={`transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+              }`}
           >
             {submitted ? (
               <div className="bg-card p-8 md:p-10 rounded-sm border border-border text-center">
@@ -237,9 +249,8 @@ export function ContactSection() {
 
           {/* Contact Info */}
           <div
-            className={`transition-all duration-1000 delay-400 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-            }`}
+            className={`transition-all duration-1000 delay-400 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+              }`}
           >
             <div className="bg-card p-6 md:p-8 rounded-sm border border-border h-full">
               <h3 className="font-serif text-2xl text-foreground mb-6">
@@ -253,9 +264,9 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium text-foreground">Location</p>
                     <p className="text-muted-foreground mt-1">
-                      123 Elegance Avenue, Suite 200
+                      Colombo,
                       <br />
-                      New York, NY 10001
+                      Sri Lanka
                     </p>
                   </div>
                 </div>
@@ -265,7 +276,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground mt-1">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground mt-1">+94 76 388 0520</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -274,7 +285,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground mt-1">hello@eternalmoments.com</p>
+                    <p className="text-muted-foreground mt-1">joycorftevents@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -284,7 +295,7 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium text-foreground">Office Hours</p>
                     <p className="text-muted-foreground mt-1">
-                      Monday - Friday: 9am - 6pm
+                      Monday - Friday: 8am - 5pm
                       <br />
                       Saturday: 10am - 4pm
                       <br />
