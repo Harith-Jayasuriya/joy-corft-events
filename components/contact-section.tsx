@@ -53,7 +53,13 @@ export function ContactSection() {
       .join("\n")
 
     const whatsappUrl = `https://wa.me/94741207909?text=${encodeURIComponent(text)}`
-    window.open(whatsappUrl, "_blank")
+    const a = document.createElement("a")
+    a.href = whatsappUrl
+    a.target = "_blank"
+    a.rel = "noopener noreferrer"
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
 
     setIsSubmitting(false)
     setSubmitted(true)
