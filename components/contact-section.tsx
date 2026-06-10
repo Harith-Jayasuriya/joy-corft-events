@@ -315,7 +315,9 @@ export function ContactSection() {
                 <p className="font-medium text-foreground mb-4">Follow Us</p>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://www.instagram.com/joycorftevents/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors"
                     aria-label="Instagram"
                   >
