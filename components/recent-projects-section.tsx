@@ -8,7 +8,6 @@ const projects = [
   { src: "/portfolio/1.jpeg", alt: "Samidhu's 5th Birthday – Spiderman themed balloon arch" },
   { src: "/portfolio/2.jpeg", alt: "Elegant Happy Birthday setup with gold and black balloons" },
   { src: "/portfolio/3.jpeg", alt: "Happy Birthday pink, white and gold balloon arrangement" },
-  { src: "/portfolio/4.jpeg", alt: "Blue and white christening balloon display" },
   { src: "/portfolio/5.jpeg", alt: "K. Preesha Sri birthday setup with red and white balloons" },
 ]
 
@@ -45,58 +44,34 @@ export function RecentProjectsSection() {
     <section ref={sectionRef} id="recent-projects" className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-6">
         <div
-          className={`text-center mb-10 md:mb-12 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`text-center mb-10 md:mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">Gallery</p>
           <h2 className="font-serif text-4xl md:text-5xl text-foreground">Our Recent Projects</h2>
           <div className="mt-6 w-24 h-px bg-primary/50 mx-auto" />
         </div>
 
-        {/* Grid: 3 top + 2 bottom centered */}
         <div
-          className={`transition-all duration-1000 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-4 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {projects.slice(0, 3).map((project, i) => (
-              <div
-                key={i}
-                className="group relative overflow-hidden rounded-sm cursor-pointer aspect-[4/3]"
-                onClick={() => setLightboxIndex(i)}
-              >
-                <Image
-                  src={project.src}
-                  alt={project.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-foreground/40 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 sm:max-w-[66.66%] sm:mx-auto">
-            {projects.slice(3).map((project, i) => (
-              <div
-                key={i + 3}
-                className="group relative overflow-hidden rounded-sm cursor-pointer aspect-[4/3]"
-                onClick={() => setLightboxIndex(i + 3)}
-              >
-                <Image
-                  src={project.src}
-                  alt={project.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-foreground/40 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-              </div>
-            ))}
-          </div>
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              className="group relative overflow-hidden rounded-sm cursor-pointer aspect-4/3"
+              onClick={() => setLightboxIndex(i)}
+            >
+              <Image
+                src={project.src}
+                alt={project.alt}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-foreground/40 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+            </div>
+          ))}
         </div>
       </div>
 

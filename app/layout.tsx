@@ -8,14 +8,17 @@ const _inter = Inter({ subsets: ["latin"] });
 const _playfair = Playfair_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Joy Craft Events | Wedding & Event Planning',
+  title: 'Joy Corft Events | Wedding & Event Planning',
   description: 'Crafting joy into every celebration. Premium wedding and event planning services for your most cherished moments.',
-  generator: 'v0.app',
   icons: {
-    icon: {
-      url: '/icon.svg',
-      type: 'image/svg+xml',
-    },
+    icon: '/Logo1_compressed_compressed-no-bg.png',
+    apple: '/Logo1_compressed_compressed-no-bg.png',
+  },
+  openGraph: {
+    title: 'Joy Corft Events | Wedding & Event Planning',
+    description: 'Crafting joy into every celebration. Premium wedding and event planning services for your most cherished moments.',
+    images: ['/Logo1_compressed_compressed-no-bg.png'],
+    type: 'website',
   },
 }
 
